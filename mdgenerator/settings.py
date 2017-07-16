@@ -25,7 +25,7 @@ SECRET_KEY = 'ys$c2&v%sv92g$9tgw8(e7+xh89e7am5!=mj(1)dja_w04j8j8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mdgenerator.herokuapp.com']
 
 
 # Application definition
