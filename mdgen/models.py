@@ -11,3 +11,19 @@ class Member(models.Model):
 
     def __str__(self):
         return '%s (%s:%s)' % (self.name, self.login, self.password)
+    
+
+class CountryData(models.Model):
+    country = models.CharField(max_length=10)
+    data = models.TextField()
+    
+    def __str__(self):
+        return '%s (%s)' % (self.country, len(self.data))
+    
+
+class Country(models.Model):
+    country = models.CharField(max_length=10)
+    country_full = models.CharField(max_length=128)
+    
+    def __str__(self):
+        return '%s | %s' % (self.country, self.country_full)
