@@ -18,7 +18,7 @@ class CountryData(models.Model):
     data = models.TextField()
     
     def __str__(self):
-        return '%s (%s)' % (self.country, len(self.data))
+        return '%s (%s)' % (self.country, True if len(self.data) > 0 else False)
     
 
 class Country(models.Model):
@@ -27,3 +27,11 @@ class Country(models.Model):
     
     def __str__(self):
         return '%s | %s' % (self.country, self.country_full)
+
+
+class UserData(models.Model):
+    type = models.CharField(max_length=128)
+    data = models.TextField()
+    
+    def __str__(self):
+        return '%s (%s)' % (self.type, True if len(self.data) > 0 else False)
